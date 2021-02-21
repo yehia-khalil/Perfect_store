@@ -1,6 +1,6 @@
 # The Perfect Store
 
- Perfect Store is an ecommerce store that makes it easy and affordable to sell any product and service on your website.
+ Perfect Store is an ecommerce store that makes it easy and affordable to sell sell our high quality products all over Egypt.
  
  ### Technologies used:
  * JavaScript
