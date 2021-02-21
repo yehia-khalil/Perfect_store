@@ -1,0 +1,168 @@
+#store {
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+}
+
+.div1 {
+    width: 30%;
+    background-color: #e6e6e6;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top:30px;
+    padding-bottom:30px;
+
+}
+
+h3 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+}
+
+@media (max-width:600px) {
+    .div1 {
+        width: 100%;
+        margin: 20px;
+    }
+}
+
+#btn-container {
+    height: 200px;
+    position: relative;
+}
+
+#shop-btn {
+    width: 170px;
+    text-align: center;
+    border:2px solid mediumslateblue;
+    border-radius: 16px;
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+}
+
+#shop-btn:hover{
+    cursor: pointer;
+    background-color: #d9d9d9;
+    color: black;
+    border-color: black;
+}
+
+
+
+
+#footer{
+    background-color: #D3D3D3;
+    padding-top: 20px;
+    
+}
+
+
+
+
+#small {
+    display: flex;
+    flex-direction: row;
+    height: 570px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.shirtsTab {
+    width: 30%;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background-image: url("/public/img/15298631_fpx.jfif");
+}
+.pantsTab {
+    width: 30%;
+    border: 2px solid grey;
+    border-radius: 5px;
+    background-image: url("/public/img/images.jfif");
+}
+
+.price {
+    font-size: 40px;
+    margin-bottom: 3px;
+    font-family: cursive;
+    color: orangered;
+}
+
+.bundle{
+    font-size: 40px;
+    margin-bottom: 3px;
+    font-family: cursive;
+    color: orangered;
+}
+.button{
+    background-color:#e62e00;
+    line-height: 50px;
+    font-family: fantasy;
+    font-size: large;
+    color: white;
+}
+.shirtsTab:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2), -10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+}
+.pantsTab:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+    box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2), -10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+}
+.button:hover{
+    cursor: pointer;
+    color: black;
+    background-color: #D3D3D3;
+    border-radius: 30px;
+}
+@media(max-width:1065px){
+    .shirtsTab{
+        width:50%;
+        margin: 20px;
+    }
+    .pantsTab{
+        width: 50%;
+        margin:20px;
+    }
+    #small{
+        height: 1040px;
+    }
+}
+@media(max-width:600px){
+    .shirtsTab{
+        width: 100%;
+        margin: 20px;
+    }
+    .pantsTab{
+        width: 100%;
+        margin:20px;
+    }
+    #small{
+        height: 1040px;
+    }
+}
+@media(max-width:365px){
+    .shirtsTab{
+        width: 100%;
+        margin: 20px;
+    }
+    .pantsTab{
+        width: 100%;
+        margin:20px;
+    }
+    #small{
+        height: 1200px;
+    }
+}
+
+.black{
+    color: black;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/css/home.css">
+    
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        #map {
+            height: 400px;
+            width: 50%;
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Find Us</title>
+</head>
+
+<body>
+
+    <% if(name=="") { %>
+        <%- include("../headers/visitorHeader.ejs") %>
+   
+        <% }else{ %>
+            <% if(name=="admin") { %>
+                <%- include("../headers/adminHeader.ejs") %>
+           
+                <% }else{ %>
+                    <%- include("../headers/customerHeader.ejs") %>
+               <% } %>
+       <% } %>
+
+       <div class="container" style="margin-top: 40px; margin-bottom: 20px; padding-left: 30px;">
+        <h3 style="margin-bottom: 30px;">Find Our Store</h3>
+        <div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center;">
+
+            <div id="map"></div>
+            <div style="display: flex; flex-direction: column; background-color: #D3D3D3; padding: 20px;">
+                <strong>
+                    <div>ADDRESS</div>
+                </strong>
+                <div style="margin-bottom: 30px;">19 Al-Farouk Omar st., Smouha, Alexandria</div>
+                <strong>
+                    <div>HOTLINE</div>
+                </strong>
+                <div style="margin-bottom: 30px;"> <a href="tel:07775000">0777-5000</a> </div>
+                <strong>
+                    <div>OUTSIDE EGYPT</div>
+                </strong>
+                <div style="margin-bottom: 30px;"> <a href="tel:+20207775000">(+202) 0777-5000</a></div>
+                <strong>
+                    <div>EMAIL</div>
+                </strong>
+                <div style="margin-bottom: 30px;"><a
+                        href="mailto:customer.care@perfectstore.com.eg">customer.care@perfectstore.com.eg</a> </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyMNj4ioiwFmz3K5PFpXQluIgVjZsfpP4&callback=initMap&libraries=&v=weekly"
+        async></script>                
+
+    <%- include("../footer.ejs") %>
+
+    <script src="../../public/js/logic.js"></script>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/home.css">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        #store {
+            font-family: 'Indie Flower', cursive;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <%- include("../headers/adminHeader.ejs") %>
+
+
+            <div class="row justify-content-md-center">
+            <div class="col col-lg-8">
+                <div class="row" style="margin-top:75px; padding-bottom:10px;padding-top: 15px;">
+                    <p class="lead" style="font-size: 26px;"><strong>Add product image first : </strong></p>
+                </div>
+
+                <div class="row shadow p-3 mb-5 bg-white rounded"  style="border: 2px solid rgb(202, 202, 202); padding-bottom: 0px;border-radius: 7px;">
+                    <div class="col">
+                        <form method="POST" action="/upload-item-pic" enctype="multipart/form-data">
+                            <div>
+                                <label>Select item picture:</label>
+                                <input type="file" name="item_pic" />
+                            </div>
+                            <div>
+                                <input type="submit" name="btn_upload_item_pic" value="Upload" />
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+                    
+                
+            </div>
+        </div>
+
+    </div>
+
+    <%- include("../footer.ejs") %>
+    <script src="../../public/js/logic.js"></script>
+</body>
+
+</html>

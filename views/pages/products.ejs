@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/css/home.css">
+    
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        .moredetails {
+            background-color: yellow;
+            line-height: 30px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .moredetails:hover {
+            border-radius: 20px;
+            cursor: pointer;
+            background-color: goldenrod;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            transition: all 1s;
+            box-shadow: 10px 10px 10px 0 rgba(0, 0, 0, 0.2), -10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        img:hover {
+            cursor: pointer;
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Products</title>
+</head>
+
+<body>
+    <script>
+        
+    </script>
+
+    <% if(name=="admin") { %>
+        <%- include("../headers/adminHeader.ejs") %>
+   
+        <% }else{ %>
+            <%- include("../headers/customerHeader.ejs") %>
+       <% } %>
+
+
+
+
+    <div class="container" style="margin-top: 50px; margin-bottom: 30px;">
+        <h2>Products</h2>
+        <div class="dropdown">
+            Select from our products
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                -Select Product-
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="dropdownMenu">
+                <a class="dropdown-item" href="#" id="dropdownShirts" onclick="showShirts()">Shirts</a>
+                <a class="dropdown-item" href="#" id="dropdownPants" onclick="showPants()">Pants</a>
+                <a class="dropdown-item" href="#" id="dropdownAll" onclick="showAll()">Show All</a>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="card-columns" style="margin-top: 40px;" id="cards">
+
+            </div>
+        </div>
+    </div>
+
+    <%- include("../footer.ejs") %>
+
+    <script src="../../public/js/logic.js"></script>
+    
+    
+</body>
+
+</html>

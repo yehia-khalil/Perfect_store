@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../public/css/home.css">
+    
+    <title>Profile</title>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <style>
+        #store {
+            font-family: 'Indie Flower', cursive;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <%- include("../headers/customerHeader.ejs") %>
+
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-8">
+            <div class="row" style="margin-top:75px; padding-bottom:10px;padding-top: 15px;">
+                <p class="lead" style="font-size: 26px;"><strong>Your Account Information : </strong></p>
+            </div>
+
+            <div class="row shadow p-3 mb-5 rounded"  style="border: 2px solid rgb(202, 202, 202); padding-bottom: 0px;border-radius: 7px;">
+                <div class="col">
+                    <div class="row" style="margin-top: 10px;">
+                        <p style="margin-left:15px;margin-bottom: 0px">Name :</p>
+                    </div>
+                    <div class="row" style="margin-top: 0px ;" >
+                        <div class="col col-lg-10">
+                            <p><%= name %></p>
+                        </div>
+                        <div class="col col-lg-2" style="margin-top: -15px;">
+                            <button type="button" class="btn btn-light" onclick="show1()">Edit</button>
+                        </div>
+                    </div>
+                    <div class="row" style="display: none;" id="edit1">
+                        <div class="col col-lg-6">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="editedname" placeholder="Enter New Name" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="nameEdit()">Submit</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row" style="margin-top: 20px;">
+                        <p style="margin-left:15px;margin-bottom: 0px">E-mail :</p>
+                    </div>
+                    <div class="row" style="margin-top: 0px;" >
+                        <div class="col col-lg-10">
+                            <p><%= email %></p>
+                        </div>
+                        <div class="col col-lg-2" style="margin-top: -15px;">
+                            <button type="button" class="btn btn-light" onclick="show2();">Edit</button>
+                        </div>
+                    </div>
+                    <div class="row" style="display: none;" id="edit2">
+                        <div class="col col-lg-6">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="editedmail" placeholder="Enter New E-mail" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="mailEdit()">Submit</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row" style="margin-top: 20px;">
+                        <p style="margin-left:15px;margin-bottom: 0px">Phone :</p>
+                    </div>
+                    <div class="row" style="margin-top: 0px;" >
+                        <div class="col col-lg-10">
+                            <p><%= phone %></p>
+                        </div>
+                        <div class="col col-lg-2" style="margin-top: -15px;">
+                            <button type="button" class="btn btn-light" onclick="show3()">Edit</button>
+                        </div>
+                    </div>
+                    <div class="row" style="display: none;" id="edit3">
+                        <div class="col col-lg-6">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="editedphone" placeholder="Enter New phone no." aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="phoneEdit()">Submit</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row" style="margin-top: 20px;">
+                        <p style="margin-left:15px;margin-bottom: 0px">Address :</p>
+                    </div>
+                    <div class="row" style="margin-top: 0px;" >
+                        <div class="col col-lg-10">
+                            <p><%= address %></p>
+                        </div>
+                        <div class="col col-lg-2" style="margin-top: -15px;">
+                            <button type="button" class="btn btn-light" onclick="show4()">Edit</button>
+                        </div>
+                    </div>
+                    <div class="row" style="display: none;" id="edit4">
+                        <div class="col col-lg-6">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="editedaddress" placeholder="Enter New address" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="addressEdit()">Submit</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+                
+            
+        </div>
+    </div>
+
+   <div></div>
+    <%- include("../footer.ejs") %>
+
+    <script src="../../public/js/profileScript.js"></script>
+</body>
+</html>

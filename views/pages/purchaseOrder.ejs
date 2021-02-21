@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/css/home.css">
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Orders</title>
+</head>
+
+<body>
+    <script>
+
+    </script>
+
+
+    <%- include("../headers/adminHeader.ejs") %>
+
+
+
+        <div class="container" style="margin-top: 50px;margin-bottom: 50px;">
+            <h3>Purchases Done</h3>
+            <table class="table table-hover">
+                <tr>
+                    <th scope="col">
+                        #
+                    </th>
+
+                    <th scope="col">
+                        Item Name
+                    </th>
+
+                    <th scope="col">
+                        Price
+                    </th>
+                    <th scope="col">
+                        Date
+                    </th>
+
+                    <th scope="col">
+                        Quantity
+                    </th>
+                </tr>
+
+                <tbody>
+                    <% items.forEach(function(item){ %>
+                        <tr>
+                            <th scope="row">
+                                Order :
+                            </th>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <% item.forEach(function(unit){ %>
+                            <tr>
+                                <th scope="row">
+                                    -
+                                </th>
+                                <td>
+                                    <%=unit.name %>
+                                </td>
+                                <td>
+                                    <%=unit.price %>
+                                </td>
+                                <td>
+                                    <%=unit.date %>
+                                </td>
+                                <td>x1</td>
+                            </tr>
+                            <% }) %>
+
+                                <% }) %>
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <%- include("../footer.ejs") %>
+
+            <script src="../../public/js/logic.js"></script>
+
+
+</body>
+
+</html>

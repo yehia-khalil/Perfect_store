@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/css/home.css">
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        img {
+            width: 30%;
+            cursor: pointer;
+            height: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Product details</title>
+</head>
+
+<body>
+    <script>
+
+    </script>
+
+    <% if(name=="admin" ) { %>
+        <%- include("../headers/adminHeader.ejs") %>
+
+            <% }else{ %>
+                <%- include("../headers/customerHeader.ejs") %>
+                    <% } %>
+
+                        <div class="container" style="margin: 50px;">
+                            <h2>Product Details</h2>
+
+                            <div
+                                style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center;">
+
+                                <img src="<%= image%>" style="width:30%;cursor:zoom-in"
+                                    onclick="document.getElementById('modal01').style.display='block'">
+
+                                <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+                                    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+                                    <div class="w3-modal-content w3-animate-zoom">
+                                        <img src="<%= image %>" style="width:100%">
+                                    </div>
+                                </div>
+                                <div style="display: flex; flex-direction: column; margin-left: 40px;">
+                                    <strong>
+                                        <h2 id="productName">
+                                            <%= prodname%>
+                                        </h2>
+                                    </strong>
+
+                                    <strong>
+                                        <h2>item description</h2>
+                                    </strong>
+                                    <p>
+                                        <%= description %>
+                                    </p>
+                                    <span style="margin-bottom: 30px;" id="productPrice">
+                                        Price : <%= price %> L.E
+                                    </span> <br>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                        data-target="#loginModal">Add to cart</button>
+
+                                    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+                                        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLongTitle">Fill cart</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close" onclick="addToCart()">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h3>Successfully added to your cart</h3>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                                        onclick="addToCart()">Ok</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <%- include("../footer.ejs") %>
+
+                            <script src="../../public/js/logic.js"></script>
+
+
+
+</body>
+
+</html>
