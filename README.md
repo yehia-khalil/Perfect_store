@@ -12,6 +12,15 @@
  * In your browser paste this URL: **"localhost:8080/home"**
  * Start by registering an account, login and start shopping for the best Products.
  
+ ### Features in the app:
+ * User can add whatever products he desire inside his cart, before confirming his order.
+ * Admin can add products, remove products and view orders done by clients, when where they ordered and by whom.
+ 
+ ## Issues wihin the app:  
+* Admin cannot edit products.
+* User doesn't have a profile picture attached with his profile.
+
+ 
  
  A project by :
 * 1- Ibrahim Hisham
