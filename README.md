@@ -3,6 +3,8 @@
  Perfect Store is an ecommerce store that makes it easy and affordable to sell sell our high quality products all over Egypt.
  
  ### Technologies used:
+ * HTML 5
+ * CSS 3
  * JavaScript
  * Node Js
  * Data is saved in **.json** files
